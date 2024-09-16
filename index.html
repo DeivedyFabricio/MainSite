@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Página Inicial</title>
+
+    <link rel="stylesheet" href="style.css"/>
+    <script src="main.js"></script>
+</head>
+
+<body>
+
+<style>
+.Styleinline {
+    font-size: 32px;
+    width: fit-content;
+    height: 50px;
+    color:rgb(0, 0, 0);
+    border: 10px;
+    margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+</style>
+<!--Observação: Programação Css inline-->
+
+<header>
+         <div class="Style01">
+             <h1>Site Apresentação</h1>
+         </div>
+</header>
+
+<nav>
+    <a href=""target="_self" rel="self" id="painel"class="att">Página Inicial</a>
+    <a href="sobre_mim.html"target="_self" rel="next" id="painel">Sobre Mim</a>
+    <a href="meus_projetos.html"target="_self" rel="next">Projetos</a>
+    <a href="contatos.html"target="_self">Contatos</a>
+</nav>
+<br><br>
+<hr class="barra">
+    <div>
+        <div class="Styleinline">
+        <h1>Página Inicial</h1>
+        </div>
+        <div class="container">
+            <div class="caixaimagem">
+                <img id="doutora" src="Logo01.jpg" class="imagem">
+            </div>
+            <div class="Style02">
+            <h2>
+              Meu nome é Deivedy Fabricio, desenvolvi este site para me apresentar e demonstrar um pouco de meu código, deixarei  também meu "portifólio", com projetos, ideias, habilidades e progressos. Tenho interesse pela área da programação e espero futuramente trabalhar com isso. Tenho conhecimentos em lógica de programação, HTML, CSS, design e inglês.
+            </h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="caixaimagem">
+        <img src="Logosemfundo.png" alt="Logo" class="fixo">
+    </div>
+
+    <div style="position:absolute; bottom: -1000px;">
+        <div>
+            <ul id="list"></ul>
+        </div>
+        
+        <div class="container">
+            <h1>Deixe o seu comentário</h1>
+        <div><input type="text"
+        id="task_name"
+        name="task_name"
+        placeholder="Nome da tarefa"
+        />
+        <!--Placeholder dá uma dica do que colocar na caixa de texto-->
+        <button onclick="addNewTask()"; class="button01">Adicionar</button>
+    </div>
+
+<script>
+//  PEGAR O ELEMENTO
+    const doutora = document.getElementById('doutora')
+    
+    // EVENTO QUANDO PASSAR O MOUSE
+    doutora.addEventListener('mouseover', function(){
+        doutora.src = "Logo01.jpg";
+    });
+    doutora.addEventListener('mouseout', function(){
+            doutora.src = "Logo01.jpg";
+     });
+
+
+    const painel = document.getElementById('painel')
+    
+    painel.addEventListener('mouseover', function(){
+        painel.class = "Style02";
+    });
+    painel.addEventListener('mouseout', function(){
+            painel.class = "Denis";
+     });
+        </script>
+</body>
+</html>
