@@ -37,7 +37,7 @@ header {
 .Style02 {
     font-size: 20px;
     color: rgb(0, 0, 0);
-    padding: 0px 30px 30px 20px;
+    padding: 0px 30px 20px 20px;
     overflow-wrap: break-word;
     max-width: 70%; /* Limita a largura máxima ao tamanho do contêiner pai */
     box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
@@ -46,7 +46,11 @@ header {
     justify-content: flex-start;
 }
 
-nav a {
+/* Estilos gerais para a nav bar */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     font-size: 30px;
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(255, 255, 255);
@@ -57,12 +61,48 @@ nav a {
     box-shadow: 10px 10px 10px rgba(28, 37, 28, 0.5);
     flex-direction: row;
     border-radius: 15px;
+}
 
-    position: relative;
-    top: 70px; /* Abaixo da caixa Style01 */
-    left: 7%;
-    width: 50%;
-    z-index: 9998; /* Um nível abaixo da .Style01 */
+nav a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    margin: 5px;
+}
+
+/* Efeito de hover */
+nav a:hover {
+    background-color: #f0f0f0;
+    width: 25%;
+    border-radius: 15px;
+    color: #000000;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Os itens ficarão em coluna */
+        align-items: flex-start; /* Alinhar à esquerda */
+        padding: 10px;
+    }
+
+    nav a {
+        font-size: 24px; /* Ajuste do tamanho da fonte para telas menores */
+        width: 100%; /* Botões vão ocupar toda a largura da tela */
+        text-align: left; /* Alinha o texto à esquerda */
+        padding-left: 20px; /* Deixa um pequeno espaço à esquerda */
+    }
+}
+
+/* Responsividade extra para telas ainda menores, como celulares em modo retrato */
+@media (max-width: 480px) {
+    nav {
+        padding: 5px;
+    }
+
+    nav a {
+        font-size: 20px; /* Reduz o tamanho da fonte */
+    }
 }
 
 ul {
@@ -95,6 +135,71 @@ input {
     margin: 20px 20px 200px 20px; /* Espaço ao redor do contêiner */
     background-color: rgb(222, 222, 222);
     color: #000000;
+    border-radius: 15px;
+    width: 95%;
+}
+
+.container01 {
+    position: fixed; /* Faz com que a caixa fique fixa na tela */
+    bottom: 0; /* Fixa no fundo da página */
+    left: 0; /* Alinha a caixa à esquerda */
+    width: 25%; /* A caixa ocupa toda a largura da tela */
+    display: flex; /* Usado para alinhar itens dentro da caixa */
+    align-items: center; /* Alinha verticalmente o conteúdo */
+    justify-content: space-between;  /*Alinha horizontalmente o conteúdo */
+    margin: 10px; /* Espaço ao redor da caixa */
+    background-color: rgb(222, 222, 222); /* Cor de fundo */
+    color: #000000; /* Cor do texto */
+    border-radius: 15px; /* Bordas arredondadas */
+    padding: 5px; /* Espaçamento interno */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para dar destaque */
+    z-index: 10000
+}
+
+/* Responsividade - Ajuste para telas menores */
+@media (max-width: 850px) {
+    .container01 {
+        flex-direction: column; /* Empilha os itens na vertical */
+        align-items: center; /* Alinha ao centro */
+        padding: 15px; /* Aumenta o espaçamento interno em telas pequenas */
+        align-items: center; /* Alinha verticalmente o conteúdo */
+        justify-content: center;  /*Alinha horizontalmente o conteúdo */
+        font-size: 2vw;
+    }
+}
+
+.container03 {
+    position: absolute; /* Faz com que a caixa fique fixa na tela */
+    bottom: -300%; /* Fixa no fundo da página */
+    left: 0; /* Alinha a caixa à esquerda */
+    width: 95%; /* A caixa ocupa toda a largura da tela */
+    display: flex; /* Usado para alinhar itens dentro da caixa */
+    align-items: center; /* Alinha verticalmente o conteúdo */
+    justify-content: center; /* Alinha horizontalmente o conteúdo */
+    margin: 20px; /* Espaço ao redor da caixa */
+    background-color: rgb(222, 222, 222); /* Cor de fundo */
+    color: #000000; /* Cor do texto */
+    border-radius: 15px; /* Bordas arredondadas */
+    padding: 10px; /* Espaçamento interno */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para dar destaque */
+    z-index: 9996;
+}
+
+.container04 {
+    position: absolute; /* Faz com que a caixa fique fixa na tela */
+    bottom: -270%; /* Fixa no fundo da página */
+    left: 0; /* Alinha a caixa à esquerda */
+    width: 95%; /* A caixa ocupa toda a largura da tela */
+    display: flex; /* Usado para alinhar itens dentro da caixa */
+    align-items: center; /* Alinha verticalmente o conteúdo */
+    justify-content: center; /* Alinha horizontalmente o conteúdo */
+    margin: 20px; /* Espaço ao redor da caixa */
+    background-color: rgb(222, 222, 222); /* Cor de fundo */
+    color: #000000; /* Cor do texto */
+    border-radius: 15px; /* Bordas arredondadas */
+    padding: 10px; /* Espaçamento interno */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para dar destaque */
+    z-index: 9997;
 }
 
 .imagem {
@@ -105,6 +210,11 @@ input {
 .imagem01 {
     width: 100px;
     height: 100px;
+}
+
+.imagem02 {
+    width: 60px;
+    height: 60px;
 }
 
 .caixaimagem {
@@ -124,23 +234,11 @@ margin: 20px 0; /* Espaço acima e abaixo da linha */
 }
 
 .att {
-    font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
     color: rgb(255, 255, 255);
-    padding: 10px 4% 10px 4%;
-    margin: 2% 2% 2% 2%;
-    text-align: center;
     background-color: rgb(1, 83, 74);
-    box-shadow: 10px 10px 10px rgba(28, 37, 28, 0.5);
-    flex-direction: row;
     border-radius: 15px;
-
-    position: relative;
-    top: 70px; /* Abaixo da caixa Style01 */
-    left: 7%;
-    width: 50%;
-    z-index: 9997; /* Um nível abaixo da .Style01 */
-}
+    width: 25%;
+    }
 
 .fixo {
  position: absolute;
